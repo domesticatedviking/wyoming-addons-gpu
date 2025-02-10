@@ -22,6 +22,8 @@ RUN \
     \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install "numpy<2" && pip install --no-cache-dir --force-reinstall tflite_runtime
+
 WORKDIR /
 COPY run.sh ./
 
